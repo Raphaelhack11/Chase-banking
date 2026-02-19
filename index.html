@@ -452,8 +452,11 @@ to { opacity:1; transform:translateY(0); }
 <!-- Top Nav -->
 <div class="d-topnav">
   <div class="d-ham"><span></span><span></span><span></span></div>
-  <div class="d-logo">
-    <svg viewBox="0 0 40 40" fill="none" width="30" height="30"><polygon points="15,2 25,2 38,15 38,25 25,38 15,38 2,25 2,15" fill="white"/><line x1="20" y1="2" x2="20" y2="38" stroke="#1168c8" stroke-width="4"/><line x1="2" y1="20" x2="38" y2="20" stroke="#1168c8" stroke-width="4"/></svg>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div class="d-logo">
+      <svg viewBox="0 0 40 40" fill="none" width="30" height="30"><polygon points="15,2 25,2 38,15 38,25 25,38 15,38 2,25 2,15" fill="white"/><line x1="20" y1="2" x2="20" y2="38" stroke="#1168c8" stroke-width="4"/><line x1="2" y1="20" x2="38" y2="20" stroke="#1168c8" stroke-width="4"/></svg>
+    </div>
+    <span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:800;letter-spacing:2px;color:#1a1a2e;">CHASE</span>
   </div>
   <div class="d-avatar" onclick="doLogout()">
     👩
@@ -589,10 +592,10 @@ to { opacity:1; transform:translateY(0); }
   }
 
   function doLogin() {
-    const email = document.getElementById('loginEmail').value.trim().toLowerCase();
+    const email = document.getElementById('loginEmail').value.trim();
     const pw = document.getElementById('loginPassword').value;
     const err = document.getElementById('loginError');
-    if (email === 'admin@gmail.com' && pw === 'admin') {
+    if (email === 'jesse' && pw === '12345') {
       err.style.display = 'none';
       goTo('dashboard');
     } else {
@@ -624,5 +627,9 @@ to { opacity:1; transform:translateY(0); }
   <div class="freeze-popup">
     <div class="freeze-icon">🔒</div>
     <h3>Account Frozen</h3>
-    <p>Your account has been frozen.<br>Please contact support to unfreeze your account.</p>
-    <p style="font-size:12px;color:#9ca3af;margin-top:-12px;margin-bottom:20px;">📞 1-800-935-9935 &nbsp;|&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="64171114140b161024070c0517014a070b09">[email&#160;protect
+    <p>Your account has been frozen.<br>Please contact support to unfreeze your account. Thank you.</p>
+    <button class="freeze-close-btn" onclick="hideFreeze()">Got it</button>
+  </div>
+</div>
+</body>
+</html>
